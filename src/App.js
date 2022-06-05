@@ -1,5 +1,6 @@
 import React from "react";
-import {Routes, Route, NavLink} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
+import {CustomNavLink} from "./js/components";
 
 import Home from "./js/pages/Home";
 import Projects from "./js/pages/Projects";
@@ -10,15 +11,9 @@ function App() {
         <div className="main-container">
             <header>
                 <ul className="page-header">
-                    <li className="page-header__item">
-                        <NavLink to="/">Кто я?</NavLink>
-                    </li>
-                    <li className="page-header__item">
-                        <NavLink to="/projects">Проекты</NavLink>
-                    </li>
-                    <li className="page-header__item">
-                        <NavLink to="/contacts">Контакты</NavLink>
-                    </li>
+                    <CustomNavLink to="/" name="Кто я?" />
+                    <CustomNavLink to="/projects" name="Проекты" />
+                    <CustomNavLink to="/contacts" name="Контакты" />
                 </ul>
             </header>
 
