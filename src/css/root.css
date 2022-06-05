@@ -7,9 +7,9 @@
 }
 
 :root[data-theme="dark"] {
-    --background-color: #080708;
-    --text-accent: #007fff;
-    --text-primary: #f7f7ff;
+    --background-color: #131515;
+    --text-accent: #CF5C36;
+    --text-primary: #E9ECEB;
 }
 
 ::selection {
