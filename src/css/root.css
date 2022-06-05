@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: "Roboto Mono", "Roboto", "Ubuntu", sans-serif;
+    margin: 0;
+}
+
+.main-container {
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+.page-content {
+    max-width: 80vw;
+    width: 620px;
+}
+
+.page-header {
+    list-style-type: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.page-header__item {
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+
+.page-header__item > a {
+    color: black;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.page-header__item:first-child {
+    margin-left: 0;
+}
+
+.page-header__item::after {
+    background: black;
+    bottom: -1px;
+    content: '';
+    height: 1px;
+    left: 0;
+    opacity: .66;
+    position: absolute;
+    right: 0;
+}
+
+.page-content__section {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.page-content__section:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.page-content__section > a {
+    color: -webkit-link;
+    text-decoration: none;
+}
