@@ -1,7 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap");
+
+:root {
+    --background-color: #f7f7ff;
+    --text-accent: #007fff;
+    --text-primary: #080708;
+}
+
+::selection {
+    color: var(--background-color);
+    background: var(--text-primary);
+}
 
 body {
-    font-family: "Roboto Mono", "Roboto", "Ubuntu", sans-serif;
+    background: var(--background-color);
+    font-family: "Roboto Mono", "Ubuntu", sans-serif;
     margin: 0;
 }
 
@@ -29,7 +41,7 @@ body {
 }
 
 .page-header__item > a {
-    color: black;
+    color: var(--text-primary);
     font-size: 16px;
     line-height: 20px;
     text-decoration: none;
@@ -40,9 +52,9 @@ body {
 }
 
 .page-header__item::after {
-    background: black;
+    background: var(--text-primary);
     bottom: -1px;
-    content: '';
+    content: "";
     height: 1px;
     left: 0;
     opacity: .66;
@@ -53,6 +65,7 @@ body {
 .page-content__section {
     font-size: 14px;
     line-height: 16px;
+    color: var(--text-primary);
 }
 
 .page-content__section:not(:last-child) {
@@ -60,6 +73,6 @@ body {
 }
 
 .page-content__section > a {
-    color: -webkit-link;
+    color: var(--text-accent);
     text-decoration: none;
 }
