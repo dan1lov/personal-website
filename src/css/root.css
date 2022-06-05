@@ -11,6 +11,10 @@
     color: var(--background-color);
 }
 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     background: var(--background-color);
     font-family: "Roboto Mono", "Ubuntu", sans-serif;
@@ -28,11 +32,15 @@ a:hover {
 }
 
 .main-container {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
     margin-left: 10vw;
     margin-top: 10vh;
 }
 
 .page-header {
+    grid-column: 1;
+    grid-row: 1;
     list-style-type: none;
     margin: 0 0 10px 0;
     padding: 0;
@@ -60,6 +68,8 @@ a:hover {
 }
 
 .page-content {
+    grid-column: 1;
+    grid-row: 2;
     max-width: 80vw;
     width: 620px;
 }
@@ -72,4 +82,23 @@ a:hover {
 
 .page-content__section:not(:last-child) {
     margin-bottom: 10px;
+}
+
+/* -- animations -- */
+.route-animation-enter {
+    opacity: 0;
+}
+
+.route-animation-enter.route-animation-enter-active {
+    opacity: 1;
+    transition: all .2s ease-out;
+}
+
+.route-animation-exit {
+    opacity: 1;
+}
+
+.route-animation-exit.route-animation-exit-active {
+    opacity: 0;
+    transition: all .2s ease-out;
 }
