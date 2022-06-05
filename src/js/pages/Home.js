@@ -1,10 +1,11 @@
 import React from "react";
+const yo = new Date().getFullYear() - 2001;
 
 function Home() {
     return (
         <main className="page-content">
             <section className="page-content__section">
-                Vladimir Danilov, 21 yo
+                {`Vladimir Danilov, ${yo} yo`}
                 <br />
                 Backend- & frontend-разработчик
             </section>
