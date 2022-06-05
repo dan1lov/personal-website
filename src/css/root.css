@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap");
 
-:root {
+:root[data-theme="light"] {
     --background-color: #f7f7ff;
     --text-accent: #007fff;
     --text-primary: #080708;
+}
+
+:root[data-theme="dark"] {
+    --background-color: #080708;
+    --text-accent: #007fff;
+    --text-primary: #f7f7ff;
 }
 
 ::selection {
@@ -19,6 +25,7 @@ body {
     background: var(--background-color);
     font-family: "Roboto Mono", "Ubuntu", sans-serif;
     margin: 0;
+    transition: all .2s ease-out;
 }
 
 a {
@@ -36,9 +43,14 @@ a:hover {
     grid-template-rows: repeat(2, auto);
     margin-left: 10vw;
     margin-top: 10vh;
+    max-width: 80vw;
+    position: relative;
+    width: 620px;
 }
 
 .page-header {
+    align-items: center;
+    display: flex;
     grid-column: 1;
     grid-row: 1;
     list-style-type: none;
@@ -70,8 +82,6 @@ a:hover {
 .page-content {
     grid-column: 1;
     grid-row: 2;
-    max-width: 80vw;
-    width: 620px;
 }
 
 .page-content__section {
@@ -85,20 +95,55 @@ a:hover {
 }
 
 /* -- animations -- */
-.route-animation-enter {
+.fade-animation-enter {
     opacity: 0;
 }
 
-.route-animation-enter.route-animation-enter-active {
+.fade-animation-enter.fade-animation-enter-active {
     opacity: 1;
     transition: all .2s ease-out;
 }
 
-.route-animation-exit {
+.fade-animation-exit {
     opacity: 1;
 }
 
-.route-animation-exit.route-animation-exit-active {
+.fade-animation-exit.fade-animation-exit-active {
     opacity: 0;
     transition: all .2s ease-out;
+}
+
+.rotate-animation-enter {
+    transform: rotate(45deg);
+}
+
+.rotate-animation-enter.rotate-animation-enter-active {
+    transform: rotate(0);
+    transition: all .2s ease-out;
+}
+
+.rotate-animation-exit {
+    transform: rotate(0);
+}
+
+.rotate-animation-exit.rotate-animation-exit-active {
+    transform: rotate(-45deg);
+    transition: all .2s ease-out;
+}
+
+/* -- theme switcher -- */
+.theme-switcher {
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    margin-left: auto;
+}
+
+.theme-switcher > * {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+[data-theme="dark"] .theme-switcher > img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(136deg) brightness(101%) contrast(102%);
 }

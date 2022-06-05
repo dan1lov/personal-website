@@ -1,7 +1,7 @@
 import React from "react";
 import {Routes, Route, useLocation} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
-import {CustomNavLink} from "./js/components";
+import {CustomNavLink, ThemeSwitcher} from "./js/components";
 
 import Home from "./js/pages/Home";
 import Projects from "./js/pages/Projects";
@@ -17,12 +17,13 @@ function App() {
                     <CustomNavLink to="/" name="Кто я?" />
                     <CustomNavLink to="/projects" name="Проекты" />
                     <CustomNavLink to="/contacts" name="Контакты" />
+                    <ThemeSwitcher />
                 </ul>
             </header>
 
             <TransitionGroup component={null}>
                 <CSSTransition key={location.key}
-                               classNames="route-animation"
+                               classNames="fade-animation"
                                timeout={200}>
                     <Routes location={location}>
                         <Route path="/" element={<Home />} />
