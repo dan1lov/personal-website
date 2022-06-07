@@ -6,7 +6,7 @@ function Home() {
     return (
         <main className="page-content">
             <section className="page-content__section">
-                {`Vladimir Danilov, ${yo} yo`}
+                {`Vladimir Danilov, ${yo} y/o`}
                 <br />
                 Backend- & frontend-разработчик
             </section>

@@ -8,8 +8,8 @@
 
 :root[data-theme="dark"] {
     --background-color: #131515;
-    --text-accent: #CF5C36;
-    --text-primary: #E9ECEB;
+    --text-accent: #cf5c36;
+    --text-primary: #e9eceb;
 }
 
 ::selection {
@@ -134,14 +134,8 @@ a:hover {
 /* -- theme switcher -- */
 .theme-switcher {
     cursor: pointer;
-    display: grid;
-    grid-template-rows: repeat(2, auto);
+    display: flex;
     margin-left: auto;
-}
-
-.theme-switcher > * {
-    grid-column: 1;
-    grid-row: 1;
 }
 
 [data-theme="dark"] .theme-switcher > img {
