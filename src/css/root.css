@@ -12,6 +12,10 @@
     --text-primary: #e9eceb;
 }
 
+:root[data-theme="dark"] img[src*="svg"] {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(136deg) brightness(101%) contrast(102%);
+}
+
 ::selection {
     background: var(--text-primary);
     color: var(--background-color);
@@ -136,8 +140,4 @@ a:hover {
     cursor: pointer;
     display: flex;
     margin-left: auto;
-}
-
-[data-theme="dark"] .theme-switcher > img {
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(136deg) brightness(101%) contrast(102%);
 }
