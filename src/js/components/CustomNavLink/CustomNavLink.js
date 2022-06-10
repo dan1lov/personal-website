@@ -1,5 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
+import "./CustomNavLink.css";
 
 function component({to, name}) {
     return (
