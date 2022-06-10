@@ -32,6 +32,15 @@ body {
     transition: all .2s ease-out;
 }
 
+img {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 a {
     color: var(--text-accent);
     text-decoration: none;
