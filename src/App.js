@@ -1,7 +1,7 @@
 import React from "react";
 import {Routes, Route, useLocation} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
-import {CustomNavLink, ThemeSwitcher} from "./js/components";
+import {PageHeaderLink, ThemeSwitcher} from "./js/components";
 
 import Home from "./js/pages/Home";
 import Projects from "./js/pages/Projects";
@@ -14,9 +14,9 @@ function App() {
         <div className="main-container">
             <header>
                 <ul className="page-header">
-                    <CustomNavLink to="/" name="Кто я?" />
-                    <CustomNavLink to="/projects" name="Проекты" />
-                    <CustomNavLink to="/contacts" name="Контакты" />
+                    <PageHeaderLink to="/" name="Кто я?" />
+                    <PageHeaderLink to="/projects" name="Проекты" />
+                    <PageHeaderLink to="/contacts" name="Контакты" />
                     <ThemeSwitcher />
                 </ul>
             </header>

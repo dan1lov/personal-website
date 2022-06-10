@@ -1,2 +1,2 @@
-export * from "./CustomNavLink/CustomNavLink";
+export * from "./PageHeaderLink/PageHeaderLink";
 export * from "./ThemeSwitcher";

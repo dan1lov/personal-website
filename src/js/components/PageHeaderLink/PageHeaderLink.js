@@ -1,6 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import "./CustomNavLink.css";
+import "./PageHeaderLink.css";
 
 function component({to, name}) {
     return (
@@ -17,4 +17,4 @@ function component({to, name}) {
     );
 }
 
-export const CustomNavLink = component;
+export const PageHeaderLink = component;
