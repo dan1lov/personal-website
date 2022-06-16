@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {CSSTransition} from "react-transition-group";
-import moon from "../../svg/moon.svg";
-import sun from "../../svg/sun.svg";
+import moon from "../../../svg/moon.svg";
+import sun from "../../../svg/sun.svg";
 
 function Component() {
     const defDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
