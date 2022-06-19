@@ -17,6 +17,10 @@
     margin-left: 0;
 }
 
+.page-header__item:last-child {
+    margin-right: 0;
+}
+
 .page-header__link {
     color: var(--text-primary);
     font-size: 16px;
@@ -28,19 +32,4 @@
 
 .page-header__link:hover, .page-header__link_active {
     color: var(--text-accent) !important;
-}
-
-.page-content {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.page-content__section {
-    color: var(--text-primary);
-    font-size: 14px;
-    line-height: 16px;
-}
-
-.page-content__section:not(:last-child) {
-    margin-bottom: 10px;
 }

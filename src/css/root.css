@@ -68,6 +68,22 @@ a:hover {
     margin-left: auto !important;
 }
 
+.page-content {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.page-content__section {
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 16px;
+    text-align: justify;
+}
+
+.page-content__section:not(:last-child) {
+    margin-bottom: 10px;
+}
+
 /* -- animations -- */
 .fade-animation-enter {
     opacity: 0;
