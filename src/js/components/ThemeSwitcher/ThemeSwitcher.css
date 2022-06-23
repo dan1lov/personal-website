@@ -1,0 +1,14 @@
+.theme-switcher {
+    cursor: pointer;
+    display: flex !important;
+    height: 24px;
+    margin-left: auto !important;
+    position: relative;
+}
+
+.theme-switcher > * {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

@@ -27,7 +27,7 @@
     font-weight: 500;
     line-height: 20px;
     text-decoration: none;
-    transition: all .2s ease-out;
+    transition: var(--change-delay) ease-out;
 }
 
 .page-header__link:hover, .page-header__link_active {

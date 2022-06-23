@@ -2,6 +2,19 @@ import React, {useEffect, useState} from "react";
 import {CSSTransition} from "react-transition-group";
 import moon from "../../../svg/moon.svg";
 import sun from "../../../svg/sun.svg";
+import "./ThemeSwitcher.css";
+
+const AnimImage = ({image, size, ...rest}) => {
+    return (
+        <CSSTransition
+            children={<img src={image} width={size} alt="" />}
+            classNames="rotate-animation"
+            timeout={{enter: 300, exit: 200}}
+            unmountOnExit
+            {...rest}
+        />
+    );
+}
 
 function Component() {
     const defDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -18,11 +31,8 @@ function Component() {
 
     return (
         <li className="page-header__item theme-switcher" onClick={switchTheme}>
-            <CSSTransition in={theme === "dark"}
-                           classNames="rotate-animation"
-                           timeout={200}>
-                <img src={theme === "light" ? sun : moon} width="24px" alt="" />
-            </CSSTransition>
+            <AnimImage image={sun} in={theme === "dark"} size="24px" />
+            <AnimImage image={moon} in={theme === "light"} size="24px" />
         </li>
     );
 }
