@@ -29,7 +29,8 @@
     color: var(--background-color);
 }
 
-html {
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-text-size-adjust: 100%;
 }
 
@@ -78,6 +79,7 @@ a:hover {
 .page-content__section {
     color: var(--text-primary);
     font-size: 14px;
+    font-weight: 500;
     line-height: 16px;
     text-align: justify;
     transition: var(--change-delay) ease-out;
