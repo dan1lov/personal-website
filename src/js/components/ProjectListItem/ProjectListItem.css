@@ -1,0 +1,56 @@
+.page-content__section.project-list-item:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.project-list-item {
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 18px 1fr 14px;
+    justify-content: start;
+    margin-left: -5px;
+    padding: 5px;
+    position: relative;
+    transition: var(--change-delay) ease-out;
+    width: 80%;
+}
+
+.project-list-item:hover {
+    background-color: rgba(var(--text-accent-rgb), 0.075);
+    transform: scale(101%);
+}
+
+.project-list-item:active {
+    transform: scale(99%);
+}
+
+.project-list-item__icon {
+    grid-column: 1;
+    height: 18px;
+    transition: var(--change-delay) ease-out;
+    width: 18px;
+}
+
+.project-list-item__name {
+    font-size: 14px;
+    font-weight: 500;
+    grid-column: 2;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.project-list-item__arrow {
+    grid-column: 3;
+    height: 12px;
+    opacity: 0;
+    transition: var(--change-delay) ease-out;
+    width: 12px;
+}
+
+.project-list-item:hover .project-list-item__arrow {
+    opacity: 1;
+}
