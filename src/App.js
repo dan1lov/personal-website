@@ -4,7 +4,8 @@ import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {PageHeaderLink, ThemeSwitcher} from "./js/components";
 
 import Home from "./js/pages/Home";
-import Projects from "./js/pages/Projects";
+import ProjectsList from "./js/pages/ProjectsList";
+import ProjectShow from "./js/pages/ProjectShow";
 import Contacts from "./js/pages/Contacts";
 
 function App() {
@@ -27,7 +28,10 @@ function App() {
                                timeout={200}>
                     <Routes location={location}>
                         <Route path="/" element={<Home />} />
-                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/projects">
+                            <Route index element={<ProjectsList />} />
+                            <Route path=":id" element={<ProjectShow />} />
+                        </Route>
                         <Route path="/contacts" element={<Contacts />} />
 
                         <Route path="*" element={
