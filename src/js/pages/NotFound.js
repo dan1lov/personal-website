@@ -2,8 +2,8 @@ import React from "react";
 
 function NotFound() {
     return (
-        <main className="page-content">
-            <section className="page-content__section">
+        <main className="content">
+            <section className="content__section">
                 страница не найдена
             </section>
         </main>

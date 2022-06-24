@@ -2,8 +2,8 @@ import React from "react";
 
 function Contacts() {
     return (
-        <main className="page-content">
-            <section className="page-content__section">
+        <main className="content">
+            <section className="content__section">
                 email: <a href="mailto: vladimir@danilov.pw"
                           target="_blank"
                           rel="noreferrer">vladimir@danilov.pw</a>

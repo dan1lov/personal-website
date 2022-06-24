@@ -16,7 +16,7 @@ const AnimImage = ({image, size, ...rest}) => {
     );
 }
 
-function Component() {
+function Component({className}) {
     const defDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const [theme, setTheme] = useState(defDark ? "dark" : "light");
 
@@ -30,10 +30,11 @@ function Component() {
     }, [theme]);
 
     return (
-        <li className="header__item theme-switcher" onClick={switchTheme}>
+        <div className={["theme-switcher", className].filter(Boolean).join(" ")}
+             onClick={switchTheme}>
             <AnimImage image={sun} in={theme === "dark"} size="24px" />
             <AnimImage image={moon} in={theme === "light"} size="24px" />
-        </li>
+        </div>
     );
 }
 

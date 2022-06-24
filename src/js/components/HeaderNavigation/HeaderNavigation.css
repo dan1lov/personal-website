@@ -3,14 +3,23 @@
     display: flex;
     grid-column: 1;
     grid-row: 1;
-    list-style-type: none;
     margin: 0 0 10px 0;
     padding: 0;
 }
 
+.header .theme-switcher {
+    margin-left: auto !important;
+}
+
 .header__item {
+    color: var(--text-primary);
     display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
     margin: 10px;
+    text-decoration: none;
+    transition: var(--change-delay) ease-out;
 }
 
 .header__item:first-child {
@@ -21,15 +30,6 @@
     margin-right: 0;
 }
 
-.header__link {
-    color: var(--text-primary);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
-    text-decoration: none;
-    transition: var(--change-delay) ease-out;
-}
-
-.header__link:hover, .header__link_active {
+.header__item:hover, .header__item_active {
     color: var(--text-accent) !important;
 }

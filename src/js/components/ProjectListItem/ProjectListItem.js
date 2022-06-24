@@ -11,7 +11,7 @@ function component({id, type, name}) {
 
     return (
         <NavLink to={`/projects/${id}`}
-                 className="page-content__section project-list-item">
+                 className="content__section project-list-item">
             <img className="project-list-item__icon" src={icon} alt="" />
             <div className="project-list-item__name" children={name} />
             <img className="project-list-item__arrow" src={CHEVRON} alt="" />

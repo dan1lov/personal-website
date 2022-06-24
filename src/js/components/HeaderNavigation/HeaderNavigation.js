@@ -6,29 +6,25 @@ import "./HeaderNavigation.css";
 // -- help components
 function HeaderLink({to, name}) {
     return (
-        <li className="header__item">
-            <NavLink
-                to={to}
-                children={name}
-                className={({isActive}) => isActive ?
-                    "header__link header__link_active" :
-                    "header__link"
-                }
-            />
-        </li>
+        <NavLink
+            to={to}
+            children={name}
+            className={({isActive}) => isActive ?
+                "header__item header__item_active" :
+                "header__item"
+            }
+        />
     );
 }
 
 // -- main
 function Component() {
     return (
-        <header>
-            <ul className="header">
-                <HeaderLink to="/" name="Кто я?" />
-                <HeaderLink to="/projects" name="Проекты" />
-                <HeaderLink to="/contacts" name="Контакты" />
-                <ThemeSwitcher />
-            </ul>
+        <header className="header">
+            <HeaderLink to="/" name="Кто я?" />
+            <HeaderLink to="/projects" name="Проекты" />
+            <HeaderLink to="/contacts" name="Контакты" />
+            <ThemeSwitcher className="header__item" />
         </header>
     );
 }

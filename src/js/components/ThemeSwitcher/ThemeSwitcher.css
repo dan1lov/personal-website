@@ -1,8 +1,7 @@
 .theme-switcher {
     cursor: pointer;
-    display: flex !important;
     height: 24px;
-    margin-left: auto !important;
+    width: 24px;
     position: relative;
 }
 

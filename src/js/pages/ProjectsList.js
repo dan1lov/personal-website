@@ -22,7 +22,7 @@ const projects = [
 
 function ProjectsList() {
     return (
-        <main className="page-content">
+        <main className="content">
             {projects.map(({id, type, name}) =>
                 <ProjectListItem id={id} key={id} type={type} name={name} />
             )}
