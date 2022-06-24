@@ -4,7 +4,7 @@ import {ProjectListItem} from "../components";
 const projects = [
     {id: 1, type: "site", name: "Конструктор чат-ботов «ubots.ru»"},
     {id: 2, type: "chat", name: "4Bots — развлекательные чат-боты"},
-    {id: 3, type: "chat", name: "Экономическая игра «Самповская Лихорадка»"},
+    {id: 3, type: "chat", name: "GTA SA-MP в диалоге ВКонтакте"},
     {id: 4, type: "site", name: "Файлообменник «files.danilov.pw»"},
     {id: 6, type: "chat", name: "Пародия на VK Coin «Pins»"},
     {id: 7, type: "chat", name: "Бот для повышения активности «Coins»"},

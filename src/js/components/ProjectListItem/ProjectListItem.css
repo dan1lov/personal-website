@@ -12,9 +12,8 @@
     justify-content: start;
     margin-left: -5px;
     padding: 5px;
-    position: relative;
     transition: var(--change-delay) ease-out;
-    width: 80%;
+    width: fit-content;
 }
 
 .project-list-item:hover {
