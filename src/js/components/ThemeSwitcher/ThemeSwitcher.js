@@ -30,7 +30,7 @@ function Component() {
     }, [theme]);
 
     return (
-        <li className="page-header__item theme-switcher" onClick={switchTheme}>
+        <li className="header__item theme-switcher" onClick={switchTheme}>
             <AnimImage image={sun} in={theme === "dark"} size="24px" />
             <AnimImage image={moon} in={theme === "light"} size="24px" />
         </li>

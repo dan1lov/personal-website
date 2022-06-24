@@ -1,7 +1,7 @@
 import React from "react";
 import {Routes, Route, useLocation} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
-import {PageHeaderLink, ThemeSwitcher} from "./js/components";
+import {HeaderNavigation} from "./js/components";
 
 import Contacts from "./js/pages/Contacts";
 import Home from "./js/pages/Home";
@@ -14,14 +14,7 @@ function App() {
 
     return (
         <div className="main-container">
-            <header>
-                <ul className="page-header">
-                    <PageHeaderLink to="/" name="Кто я?" />
-                    <PageHeaderLink to="/projects" name="Проекты" />
-                    <PageHeaderLink to="/contacts" name="Контакты" />
-                    <ThemeSwitcher />
-                </ul>
-            </header>
+            <HeaderNavigation />
 
             <TransitionGroup component={null}>
                 <CSSTransition key={location.key}
