@@ -3,10 +3,11 @@ import {Routes, Route, useLocation} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {PageHeaderLink, ThemeSwitcher} from "./js/components";
 
-import Home from "./js/pages/Home";
-import ProjectsList from "./js/pages/ProjectsList";
-import ProjectShow from "./js/pages/ProjectShow";
 import Contacts from "./js/pages/Contacts";
+import Home from "./js/pages/Home";
+import NotFound from "./js/pages/NotFound";
+import ProjectShow from "./js/pages/ProjectShow";
+import ProjectsList from "./js/pages/ProjectsList";
 
 function App() {
     const location = useLocation();
@@ -28,19 +29,14 @@ function App() {
                                timeout={200}>
                     <Routes location={location}>
                         <Route path="/" element={<Home />} />
+                        <Route path="*" element={<NotFound />} />
+
                         <Route path="/projects">
                             <Route index element={<ProjectsList />} />
                             <Route path=":id" element={<ProjectShow />} />
                         </Route>
-                        <Route path="/contacts" element={<Contacts />} />
 
-                        <Route path="*" element={
-                            <main className="page-content">
-                                <section className="page-content__section">
-                                    not found
-                                </section>
-                            </main>
-                        } />
+                        <Route path="/contacts" element={<Contacts />} />
                     </Routes>
                 </CSSTransition>
             </TransitionGroup>
